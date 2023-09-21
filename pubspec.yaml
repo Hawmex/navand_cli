@@ -3,7 +3,7 @@ description: >
   The command line tool for scaffolding, serving, and building Navand
   applications.
 version: 1.0.0-alpha.1
-repository: https://github.com/Hawmex/navand
+repository: https://github.com/Hawmex/navand_cli
 executables:
   navand:
 environment:
