@@ -129,7 +129,7 @@ Future<void> logTask({
 void _customLogWriter({
   required final bool verbose,
   required final String message,
-  required final logging.Level level,
+  required final dynamic level,
   required final String? error,
 }) {
   if (!verbose) return;
@@ -144,7 +144,11 @@ void _customLogWriter({
 
   final prefix = LogSource.builder.color.wrap('[${LogSource.builder.name}] ');
 
-  final isError = level >= logging.Level.SEVERE;
+  final isError = level is logging.Level
+      ? level >= logging.Level.SEVERE
+      : (level as build_daemon_server_log.Level) >=
+          build_daemon_server_log.Level.SEVERE;
+
   final secondPrefix = isError ? ansi.lightRed.wrap('[ERROR] ') : '';
 
   for (final a in log.split('\n')) {
@@ -164,7 +168,7 @@ void handleServerLog(
   _customLogWriter(
     verbose: verbose,
     message: serverLog.message,
-    level: serverLog.level as logging.Level,
+    level: serverLog.level,
     error: serverLog.error,
   );
 }
