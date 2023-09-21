@@ -1,3 +1,7 @@
+## 1.0.0-alpha.3
+
+- Remove the unnecessarily printed lines.
+
 ## 1.0.0-alpha.2
 
 - Fix the type-casting error that is thrown by the `build` command.
