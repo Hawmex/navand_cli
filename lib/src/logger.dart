@@ -142,6 +142,8 @@ void _customLogWriter({
 
   if (log.isEmpty) return;
 
+  if (RegExp(r'^(-){1,}$').hasMatch(log)) return;
+
   final prefix = LogSource.builder.color.wrap('[${LogSource.builder.name}] ');
 
   final isError = level is logging.Level
@@ -151,11 +153,11 @@ void _customLogWriter({
 
   final secondPrefix = isError ? ansi.lightRed.wrap('[ERROR] ') : '';
 
-  for (final a in log.split('\n')) {
+  for (final line in log.split('\n')) {
     io.stdout.writeAll([
       prefix,
       secondPrefix,
-      isError ? ansi.lightRed.wrap(a) : a,
+      isError ? ansi.lightRed.wrap(line) : line,
       '\n',
     ]);
   }
