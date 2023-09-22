@@ -140,9 +140,7 @@ void _customLogWriter({
 
   final log = buffer.toString().trim();
 
-  if (log.isEmpty) return;
-
-  if (RegExp(r'^(-){1,}$').hasMatch(log)) return;
+  if (log.isEmpty || RegExp(r'^(-){1,}$').hasMatch(log)) return;
 
   final prefix = LogSource.builder.color.wrap('[${LogSource.builder.name}] ');
 

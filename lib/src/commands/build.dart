@@ -102,8 +102,8 @@ final class BuildCommand extends CommandBase {
           gotBuildStart = gotBuildStart ||
               targetResult.status == build_status.BuildStatus.started;
 
-          if (!gotBuildStart) continue;
-          if (targetResult.status == build_status.BuildStatus.started) continue;
+          if (!gotBuildStart ||
+              targetResult.status == build_status.BuildStatus.started) continue;
 
           if (targetResult.status == build_status.BuildStatus.failed) {
             throw targetResult.error!;
