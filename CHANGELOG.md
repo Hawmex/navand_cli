@@ -1,3 +1,8 @@
+## 1.0.0-alpha.4
+
+- Fix the bug with printing the wrong version.
+- Internal improvements.
+
 ## 1.0.0-alpha.3
 
 - Remove the unnecessarily printed lines.
