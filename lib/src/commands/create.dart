@@ -35,7 +35,7 @@ A [Navand](https://pub.dev/documentation/navand) App.
 ## Serve Your App
 
 ```
-webdev serve
+navand serve
 ```
 ''',
     ),
@@ -295,7 +295,7 @@ final class Logo extends StatelessWidget {
     print(
       'Run the following commands:\n'
       '\tcd $_appName\n'
-      '\twebdev serve',
+      '\tnavand serve',
     );
 
     io.exit(0);
