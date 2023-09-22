@@ -2,7 +2,7 @@ name: navand_cli
 description: >
   The command line tool for scaffolding, serving, and building Navand
   applications.
-version: 1.0.0-alpha.4
+version: 1.0.0-alpha.5
 repository: https://github.com/Hawmex/navand_cli
 executables:
   navand:
