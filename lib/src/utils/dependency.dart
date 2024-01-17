@@ -7,9 +7,14 @@ final class Dependency {
   const Dependency(this.name, {this.dev = false});
 
   Future<io.Process> install() async {
-    return await io.Process.start(
+    final process = await io.Process.start(
       'dart',
       ['pub', 'add', if (dev) '-d', name],
     );
+
+    // TODO(@Hawmex): Why does this solve the problem of getting stuck at "Installing build_runner..."?
+    process.stdout.forEach((final element) {});
+
+    return process;
   }
 }
