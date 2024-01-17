@@ -47,14 +47,13 @@ description: >
   A Navand app.
 publish_to: none
 environment:
-  sdk: ^3.1.0
+  sdk: ^3.2.3
 ''',
     ),
     const File(
       path: './analysis_options.yaml',
       body: '''
 include: package:lints/recommended.yaml
-
 linter:
   rules:
     prefer_const_constructors: true
@@ -65,7 +64,6 @@ linter:
     prefer_relative_imports: true
     avoid_print: true
     comment_references: true
-
 analyzer:
   language:
     strict-casts: true
