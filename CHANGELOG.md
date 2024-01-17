@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Stable release.
+
 ## 1.0.0-alpha.5
 
 - Update messages that referred to running `webdev` instead of `navand`.
