@@ -1,3 +1,8 @@
+## 1.0.1
+
+- Add a temporary fix for getting stuck at "Installing build_runner..." when
+  calling `navand create <app_name>`.
+
 ## 1.0.0
 
 - Stable release.
